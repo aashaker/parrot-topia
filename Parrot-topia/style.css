@@ -1,0 +1,330 @@
+body{
+    background-color: #e4ddd1;
+        color: #3b4a2f;
+            font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+#navLogo{
+    width: 50px;
+    height: auto;
+}
+nav{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav div{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#navTitle{
+    font-size: 30px;
+}
+.badeen {
+  font-family: "Badeen Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+#part1,#part2{
+padding: 20px 0px;
+    font-size: 40px;
+}
+#part1{
+        width:fit-content ;
+}
+
+.part2parent{
+    width: 25%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-grow: 1;
+
+}
+
+#banner{
+    max-width: 100vw;
+    padding: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#pals{
+    margin-bottom: -100px;
+    border-radius:  50px ;
+    width: 300px;
+    box-shadow: #3b4a2f 50px 50px 0px;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #cfc5b1;
+    border-radius: 50px;
+    width: 300px;
+    height: 500px;
+        transition: all 0.3s;
+        padding: 25px;
+}
+
+.cards:hover{
+    background-color: rgb(255, 198, 83);
+    transform: translateY(-100px);
+}
+
+#cardsParent{
+    flex-wrap: wrap;
+    margin-top: 200px;
+    padding: 0px 70px;
+    gap:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+button,input{
+    padding: 20px 60px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #aeaaa2;
+    color: #eeece7;
+    font-weight: bold;
+    transition: all 0.15s;
+}
+button:hover{
+    background-color: #e5a93c;
+    color: #3B462C;
+
+}
+#btnParent{
+    margin-top: 50px;
+}
+.mainBtn{
+    background-color: #3b4a2f;
+    color: #d7d2c8;
+    font-size: 20px;
+
+
+}
+.mainBtn:hover{
+    background-color: #e5a93c;
+    color: #3B462C;
+
+}
+.cardimgparent{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5a93c;
+    height: 200px;
+    width: 275px;
+    border-radius: 50px 50px 0px 0px;
+    overflow: hidden;
+}
+.cardIMG{width: 275px;}
+.cardTXT{flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 275px;
+}
+.cardTXT h1{
+    color: #3b4a2f;
+    text-align:center ;
+    font-size: 40px;
+}
+.cardTXT button{
+background-color: #3b4a2f;
+    color: #d7d2c8;
+    font-size: 20px;
+}
+.cardTXT button:hover{
+    background-color: #e5a93c;
+    color: #3B462C;
+}
+.widthimg{
+    width: auto;
+    height: 200px;
+}
+.cardparent2{
+display: flex;
+justify-content: center;
+align-items: center;}
+.cardparent2:hover .cards{
+    background-color: #ffc653;
+    transform: translateY(-100px);
+}
+input{
+    padding: 20px 60px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #aeaaa2;
+    color: #eeece7;
+    font-weight: bold;
+    transition: all 0.15s;
+    font-size: 20px;
+}
+form{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:column;
+    gap: 10px;
+        width: 100%;
+        max-width: 550px;
+    font-size: 20px;
+        height: 100%;
+            padding:0px  50px;
+}
+.traininginput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:rows;
+    width: 100%;
+    height: 100%;
+
+}
+#trainingSignUp{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:rows;
+    height: 500px;
+    width: 50%;
+}
+#boardParent{
+    width:  50%;
+    min-width: 500px;
+    flex-grow: 1;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:rows;
+}
+#section2{
+    margin-top: 200px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:rows;
+}
+#board{
+    padding:20px;
+    width: 450px;
+    aspect-ratio: 1/1;
+    background-color: #3B462C;
+    border: #3a291d solid 12px;
+    border-radius: 16px;
+        color: #d7d2c8;
+}
+#board h1{
+    text-align: center;
+    color: #d7d2c8;
+}
+li{
+    font-size: 20px;
+    padding: 20px;
+}
+#section3{
+    overflow:auto;
+margin-top: 200px;
+height: fit-content;
+position: relative;
+}
+#playArea{
+    display: block;
+    width: 100%;
+    image-orientation: flip;
+    height:auto;
+}
+#playAreaStuff{
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+    position: absolute;
+    color: #cfc5b1;
+}
+#playAreaStuff h1{
+padding: 20px 0px;
+    font-size: 40px;
+
+}
+#playAreaStuff p{
+    font-size: 40px;
+}
+
+#topicLinks{
+    display: none;
+    position:fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #cfc5b1;
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2026-10-11 20:53:26
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
