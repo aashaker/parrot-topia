@@ -51,21 +51,95 @@ const facts = ["Parrots have four toes on each foot—two pointing forward and t
 
 const boardtext = document.querySelector("#board h2");
 const topicLinks = document.querySelector("#topicLinks");
+const backBtn = document.querySelector("#back");
+const topicTitle = document.querySelector("#topicTitle");
 const infocards = document.querySelectorAll(".cardparent2")
 
+const infos = [
+  {
+    title: "Diet",
+    topics: [
+      "general guidelines for a good diet",
+      "safe veggies and their nutritional value (plus a tool make chop where you select foods and it tells you the vitamins in it)",
+      "how each vitamin benefits your bird",
+      "unsafe foods",
+      "why an all seed diet is bad",
+      "difference between diarrhea polyurea",
+      "how to introduce new foods",
+      "treats"
+    ],
+    links: [],
+    state: "not live yet"
+  },
+  {
+    title: "Training",
+    topics: [
+      "training 101 (concept of positive reinforcements, clicker training, and what tricks are essential like step up + a list of tricks generally)",
+      "how to clicker train your parrot",
+      "how to step up train your parrot",
+      "how to spin train your parrot"
+    ],
+    links: [],
+    state: "not live yet"
+  },
+  {
+    title: "Enrichment",
+    topics: [
+      "the concept of foraging",
+      "why foraging is important",
+      "how to introduce foraging",
+      "easy diy foraging toys",
+      "chewing toys",
+      "easy diy chewing toys"
+    ],
+    links: [],
+    state: "not live yet"
+  },
+  {
+    title: "Behaviors",
+    topics: [
+      "bathing",
+      "beak grinding",
+      "comfy behavior",
+      "hormonal behavior"
+    ],
+    links: [],
+    state: "not live yet"
+  },
+  {
+    title: "Awareness",
+    topics: [
+      "types of sickness (depression, a cold, plucking, respatory problem)",
+      "an article for each explaining the reasons for each, the symptoms, and steps to help fix it",
+      "how poopies can help you determine what it is",
+      "sleep routine",
+      "cage setup",
+      "household dangers",
+      "avian first aid",
+      "beak and nail maintenance"
+    ],
+    links: [],
+    state: "not live yet"
+  }
+];
 
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 let factno =getRandomIntInclusive(0,50);
-
 boardtext.textContent=facts[factno];
 
-infocards[0].onclick=function(){
-    topicLinks.style.display="block"
-}
+infocards.forEach((card,index) => {
+  card.onclick = function () {
+    topicLinks.style.display = "flex";
+    topicTitle.textContent = infos[index].title;
+  };
+});
 
+backBtn.onclick = function () {
+  topicLinks.style.display = "none";
+};
 
 
 
