@@ -317,6 +317,10 @@ padding: 20px 0px;
     top:25px;
     margin: 0;
 }
+#topics{
+    display: flex;
+    flex-direction: column;
+}
 
 
 

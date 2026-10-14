@@ -53,6 +53,7 @@ const boardtext = document.querySelector("#board h2");
 const topicLinks = document.querySelector("#topicLinks");
 const backBtn = document.querySelector("#back");
 const topicTitle = document.querySelector("#topicTitle");
+const topicCards = document.querySelector("#topics");
 const infocards = document.querySelectorAll(".cardparent2")
 
 const infos = [
@@ -60,7 +61,7 @@ const infos = [
     title: "Diet",
     topics: [
       "general guidelines for a good diet",
-      "safe veggies and their nutritional value (plus a tool make chop where you select foods and it tells you the vitamins in it)",
+      "safe veggies and their nutritional value",
       "how each vitamin benefits your bird",
       "unsafe foods",
       "why an all seed diet is bad",
@@ -74,7 +75,7 @@ const infos = [
   {
     title: "Training",
     topics: [
-      "training 101 (concept of positive reinforcements, clicker training, and what tricks are essential like step up + a list of tricks generally)",
+      "training 101",
       "how to clicker train your parrot",
       "how to step up train your parrot",
       "how to spin train your parrot"
@@ -134,12 +135,15 @@ infocards.forEach((card,index) => {
   card.onclick = function () {
     topicLinks.style.display = "flex";
     topicTitle.textContent = infos[index].title;
+     topicCards.innerHTML=""
+    infos[index].topics.forEach((topic,index2)=>{
+    topicCards.insertAdjacentHTML("beforeend",`<a>${topic}</a>`)
+  
+})
   };
 });
 
 backBtn.onclick = function () {
   topicLinks.style.display = "none";
 };
-
-
 
