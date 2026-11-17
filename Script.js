@@ -136,10 +136,10 @@ infocards.forEach((card,index) => {
     topicLinks.style.display = "flex";
     topicTitle.textContent = infos[index].title;
      topicCards.innerHTML=""
-    infos[index].topics.forEach((topic,index2)=>{
-    topicCards.insertAdjacentHTML("beforeend",`<a>${topic}</a>`)
+//     infos[index].topics.forEach((topic,index2)=>{
+//     topicCards.insertAdjacentHTML("beforeend",`<a>${topic}</a>`)
   
-})
+// })
   };
 });
 

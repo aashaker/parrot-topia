@@ -1,0 +1,286 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e4ddd1;
+  color: #3b4a2f;
+  font-weight: bold;
+}
+
+#navLogo {
+  width: 50px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+nav div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: inherit;
+}
+
+#navTitle {
+  font-size: 30px;
+}
+
+.badeen {
+  font-family: "Badeen Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background-color: #d3cec7;
+  padding: clamp(8px, 2vw, 20px);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6.25rem);
+  line-height: 1;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 12px;
+  width:fit-content;
+  transition: all 0.3s ;
+  border-radius: 28px;
+  height: fit-content;
+}
+
+.back p {
+  font-size: 20px;
+}
+
+.back:hover{
+transform:translateY(-20px);
+background-color: #ffc653;
+    box-shadow: #3b4a2f 10px 10px 0px;
+}
+
+.backicon {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.topHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#half1 {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#half2 img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: #3b4a2f 16px 20px;
+}
+#half2{
+  display: flex;
+  justify-content: end;
+}
+
+.cata {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 0;
+  margin-top: 20px;
+  padding: 2px 9px 2px 5px;
+  border: 1px solid rgba(59, 74, 47, 0.16);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f3efe7, #e9e3d9);
+  box-shadow: 0 2px 6px rgba(59, 74, 47, 0.08);
+}
+
+.cata img {
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: #dce3d3;
+}
+
+.cata p {
+  margin: 0;
+  color: #3b4a2f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+main {
+  margin: 0 auto;
+  padding: 20px clamp(16px, 4vw, 40px);
+}
+
+@media (min-width: 701px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topHeading {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  #half2 img {
+    height: min(70vh, 760px);
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav div:first-child {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  nav div:last-child {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: #e9e3d9;
+    text-decoration: none;
+  }
+
+  .topHeading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  #half1 {
+    display: contents;
+  }
+
+  .back {
+    grid-area: back;
+    margin-bottom: 20px;
+  }
+
+  .cata {
+    grid-area: category;
+    margin-top: 0;
+  }
+
+  .topHeading h1 {
+    grid-area: title;
+    margin-top: 14px;
+  }
+
+  .topHeading h3 {
+    grid-area: subtitle;
+    margin: 8px 0 20px;
+  }
+
+  #half2 {
+    grid-area: image;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  #half1 > p {
+    grid-area: description;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .topHeading {
+    grid-template-areas:
+      "back"
+      "category"
+      "title"
+      "subtitle"
+      "image"
+      "description";
+    max-width: 520px;
+  }
+
+  #half2 img {
+    aspect-ratio: 4 / 3;
+    border-radius: 24px;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 400px) {
+  nav div {
+    gap: 12px;
+  }
+
+  nav div:last-child {
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  #navTitle {
+    font-size: 26px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 13vw, 3.5rem);
+  }
+
+  .back p {
+    font-size: 18px;
+  }
+}

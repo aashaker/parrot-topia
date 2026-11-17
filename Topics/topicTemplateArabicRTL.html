@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap" rel="stylesheet" />
+
+    <title>موضوع عربي</title>
+    <style>
+      html, body {
+        direction: rtl;
+      }
+
+      body {
+        text-align: right;
+      }
+
+      nav {
+        direction: rtl;
+        flex-direction: row-reverse;
+      }
+
+      nav div {
+        direction: rtl;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 12px;
+      }
+
+      .back {
+        flex-direction: row;
+      }
+
+      .back:hover {
+        box-shadow: #3b4a2f -10px 10px 0px;
+      }
+
+      .backicon {
+        transform: scaleX(-1);
+      }
+
+      #half2 {
+        justify-content: flex-end;
+      }
+
+      @media (min-width: 901px) {
+        #half2 img {
+          box-shadow: -16px 20px;
+        }
+      }
+
+      .topHeading,
+      .cata,
+      #half1,
+      #half2 {
+        direction: rtl;
+      }
+
+      .cata p {
+        letter-spacing: 0;
+      }
+
+      @media (min-width: 701px) and (max-width: 900px) {
+        .topHeading {
+          grid-template-columns: minmax(0, 1fr);
+          grid-template-areas:
+            "back"
+            "category"
+            "title"
+            "subtitle"
+            "image"
+            "description";
+          gap: 0;
+          max-width: 720px;
+          margin: 0 auto;
+        }
+
+        #half1 {
+          display: contents;
+        }
+
+        .back {
+          grid-area: back;
+          margin-bottom: 20px;
+        }
+
+        .cata {
+          grid-area: category;
+          margin-top: 0;
+        }
+
+        .topHeading h1 {
+          grid-area: title;
+          margin-top: 14px;
+        }
+
+        .topHeading h3 {
+          grid-area: subtitle;
+          margin: 8px 0 20px;
+        }
+
+        #half1 > p {
+          grid-area: description;
+          margin: 0;
+          line-height: 1.6;
+        }
+
+        #half2 {
+          grid-area: image;
+          width: 100%;
+          justify-content: center;
+          margin-bottom: 24px;
+        }
+
+        #half2 img {
+          width: 100%;
+          max-width: 640px;
+          max-height: none;
+          height: auto;
+          aspect-ratio: 4 / 3;
+          box-shadow: none;
+        }
+      }
+
+      @media (max-width: 700px) {
+        nav {
+          align-items: stretch;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .brand {
+          flex-wrap: nowrap;
+          white-space: nowrap;
+        }
+
+        nav div:first-child {
+          justify-content: flex-end;
+        }
+
+        nav div:last-child {
+          justify-content: flex-start;
+          gap: 6px;
+        }
+
+        .back {
+          justify-content: flex-end;
+        }
+
+        .topHeading {
+          grid-template-areas:
+            "back"
+            "category"
+            "title"
+            "subtitle"
+            "image"
+            "description";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="brand">
+          <h3 class="badeen" id="navTitle">Parrot-topia</h3>
+          <img id="navLogo" src="../images/parrot-foot.png" alt="شعار طائر الببغاء" />
+        </div>
+        <div>
+          <a href="#banner">البانر</a>
+          <a href="#cardsParent">الموضوعات</a>
+          <a href="#boardParent">الحقائق</a>
+        </div>
+      </nav>
+
+      <div class="topHeading">
+        <div id="half1">
+          <div class="back" onclick="window.location.href='../index.html'">
+            <svg class="backicon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="عودة">
+              <g id="Arrow / Arrow_Left_MD">
+                <path id="Vector" d="M19 12H5M5 12L11 18M5 12L11 6" stroke="#3b4a2f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+            <p>العودة إلى الموضوعات</p>
+          </div>
+
+          <div class="cata">
+            <img src="https://www.svgrepo.com/show/488037/plant.svg" alt="أيقونة النبات" />
+            <p>الفئة</p>
+          </div>
+
+          <h1 class="badeen">موضوع تجريبي</h1>
+          <h3>هذا نص عربي نموذجّي يوضح شكل العنوان الفرعي في الصفحة.</h3>
+          <p>
+            هذا نص عربي توضيحي يساعد على تصور مظهر الصفحة عند استخدام الاتجاه من اليمين إلى اليسار،
+            مع توازن بين السهولة القراءة والهوية البصرية نفسها للمشروع.
+          </p>
+        </div>
+
+        <div id="half2">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKEvbAg6F7Ai-Qwfr-F-aRkSAr8ScNqPjct6pPGp30O1F-O5yTDsCVxPAh&s=10" alt="صورة موضوع" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h3>محتوى عربي تجريبي</h3>
+      <p>
+        يمكن استخدام هذا القسم لكتابة مقدمة أو شرح إضافي للموضوع، مع الحفاظ على التنسيق العام
+        للصفحة وتناسق الحقول البصرية في الموقع.
+      </p>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
